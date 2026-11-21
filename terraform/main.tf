@@ -211,6 +211,7 @@ resource "aws_instance" "scorume_app" {
               POSTGRES_PASSWORD=postgres
               POSTGRES_DB=scorume
               VITE_API_BASE_URL=
+              VITE_API_PROXY_TARGET=http://backend:8000
               EOT
 
               # 4. Build and start containers

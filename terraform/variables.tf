@@ -5,9 +5,9 @@ variable "aws_region" {
 }
 
 variable "instance_type" {
-  description = "EC2 Instance type (2 vCPU, 4GB RAM recommended for local NLP inference)"
+  description = "EC2 Instance type (Free Tier eligible t3.micro with automated 4GB swap)"
   type        = string
-  default     = "t3.medium"
+  default     = "t3.micro"
 }
 
 variable "app_name" {

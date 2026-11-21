@@ -173,6 +173,16 @@ resource "aws_instance" "scorume_app" {
               exec > >(tee -a /var/log/scorume-bootstrap.log) 2>&1
               echo "=== Starting Scorume Automated Bootstrap ==="
 
+              # Configure 4GB Swap Space for smooth Free Tier execution
+              if [ ! -f /swapfile ]; then
+                echo "Configuring 4GB swapfile..."
+                fallocate -l 4G /swapfile || dd if=/dev/zero of=/swapfile bs=1M count=4096
+                chmod 600 /swapfile
+                mkswap /swapfile
+                swapon /swapfile
+                echo '/swapfile none swap sw 0 0' >> /etc/fstab
+              fi
+
               # 1. Update system packages
               apt-get update -y
               apt-get install -y ca-certificates curl gnupg lsb-release git nginx

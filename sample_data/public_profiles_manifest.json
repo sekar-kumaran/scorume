@@ -1,0 +1,74 @@
+[
+  {
+    "filename": "01_omkar_chittar.pdf",
+    "name": "Omkar Chittar",
+    "persona_tier": "Top Tier Exact Match (Public CV)",
+    "source_url": "https://omkarchittar.com/cv/"
+  },
+  {
+    "filename": "02_sean_chang.docx",
+    "name": "Sean Chang",
+    "persona_tier": "Top Tier Exact Match (GitHub Portfolio CV)",
+    "source_url": "https://r05323028.github.io/"
+  },
+  {
+    "filename": "03_sergio_sabater_ruiz.pdf",
+    "name": "Sergio Sabater Ruiz",
+    "persona_tier": "Top Tier Exact Match (GitHub Portfolio CV)",
+    "source_url": "https://sergiosaba12.github.io/portfolio/"
+  },
+  {
+    "filename": "04_adarsh_chate.docx",
+    "name": "Adarsh Chate",
+    "persona_tier": "Semantic Cousin (Django/Flask + MySQL + Vue.js + GCP)",
+    "source_url": "https://adarshchate.github.io/"
+  },
+  {
+    "filename": "05_ryan_morshead.pdf",
+    "name": "Ryan Morshead",
+    "persona_tier": "Semantic Cousin (Flask + SQLite/MySQL + Vue.js + Transformers)",
+    "source_url": "https://ryanmorshead.com/resume/"
+  },
+  {
+    "filename": "06_hemang_negandhi.docx",
+    "name": "Hemang Negandhi",
+    "persona_tier": "Semantic Cousin (Flask + MySQL/Oracle + NLTK + GCP)",
+    "source_url": "https://hemangnegandhi.github.io/img/Hemang%20Negandhi%20Resume.pdf"
+  },
+  {
+    "filename": "07_abdoali_mazhar_zakir.pdf",
+    "name": "Abdoali Mazhar Zakir",
+    "persona_tier": "Junior High-Skill (1.5 yrs exp, High Technical Overlap)",
+    "source_url": "https://abdoali-zakir.github.io/"
+  },
+  {
+    "filename": "08_chirag_jain.docx",
+    "name": "Chirag Jain",
+    "persona_tier": "Junior High-Skill (1.8 yrs exp, Strong Full-Stack & ML)",
+    "source_url": "https://cjchirag7.github.io/"
+  },
+  {
+    "filename": "09_florian_lotz.pdf",
+    "name": "Florian Lotz",
+    "persona_tier": "Junior High-Skill (1.4 yrs exp, React + Python + Docker)",
+    "source_url": "https://lightgaming.github.io/portfolio-website/"
+  },
+  {
+    "filename": "10_cristina_attfield.docx",
+    "name": "Cristina Attfield",
+    "persona_tier": "Low Match / Pivot (BI Data Analyst \u2014 SQL/Excel/Tableau)",
+    "source_url": "https://nss-full-time-data-analytics-1.github.io/assets/resume/cristina.pdf"
+  },
+  {
+    "filename": "11_anand_bhagwat.pdf",
+    "name": "Anand Bhagwat",
+    "persona_tier": "Low Match / Pivot (QA Automation & Manual Tester)",
+    "source_url": "https://anandbhagwat.github.io/"
+  },
+  {
+    "filename": "12_bharti_rajoriya.docx",
+    "name": "Bharti Rajoriya",
+    "persona_tier": "Low Match / Pivot + White-Text Keyword Stuffing Test Case",
+    "source_url": "https://bhartirajoriya.github.io/"
+  }
+]

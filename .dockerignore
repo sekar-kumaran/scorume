@@ -1,0 +1,13 @@
+node_modules
+frontend/node_modules
+frontend/dist
+.git
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+resume_matcher_local.db
+scorume_local.db
+user_cvs

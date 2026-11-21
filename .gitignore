@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Databases & local stores
+*.db
+*.sqlite
+*.sqlite3
+scorume_local.db
+resume_matcher_local.db
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+frontend/dist/
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+!.env.example
+
+# OS & Editor generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+
+# Terraform local state & credentials
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.pem
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local helper scripts
+compact_docker_disk.bat
+compact_script.txt

@@ -1,0 +1,17 @@
+Job Title: Senior Full-Stack AI Engineer
+Source Platform: Wellfound (https://wellfound.com/jobs/4410736-senior-full-stack-ai-engineer — VisibilityStack.ai)
+
+About the Role:
+You will help build the intelligence layer behind the product: systems that collect data, run AI workflows, orchestrate agents, generate insights, power recommendations, and turn messy real-world search visibility problems into clean customer-facing product experiences. Minimum 4+ years of software engineering experience shipping production systems.
+
+Key Responsibilities:
+- Own backend systems and APIs: Design and build scalable asynchronous backend services using Python and FastAPI for ingestion, document parsing, scoring, semantic analysis, and recommendations.
+- Build data and relational storage infrastructure: Design clean service boundaries, relational data models, and JSONB schemas in PostgreSQL supporting high-volume monitoring, scoring, and benchmarking.
+- Build AI-native and Natural Language Processing workflows: Implement dense vector embeddings, and multi-step NLP evaluation harnesses.
+- Build product surfaces and internal operator tools: Create responsive customer-facing analytics dashboards and interactive workflow interfaces using React.
+- Own AWS infrastructure and containerized deployment: Package services with Docker and deploy reliable, observable workloads on AWS.
+
+Required Qualifications:
+- Bachelor's or Master's degree in Computer Science, Software Engineering, or Artificial Intelligence.
+- Minimum 4+ years of professional software engineering experience.
+- Core Required Skills: Python, FastAPI, React, PostgreSQL, Docker, Natural Language Processing, AWS.

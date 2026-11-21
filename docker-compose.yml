@@ -1,0 +1,75 @@
+name: scorume
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: scorume_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-scorume}
+    ports:
+      - "5432:5432"
+    volumes:
+      - scorume_postgres_data:/var/lib/postgresql/data
+    networks:
+      - scorume_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d scorume"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: scorume_backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@postgres:5432/scorume
+      EMBEDDING_MODEL_NAME: sentence-transformers/all-MiniLM-L6-v2
+      SPACY_MODEL_NAME: en_core_web_sm
+      DEBUG: "false"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app/app
+      - ./backend/tests:/app/tests
+      - ./sample_data:/sample_data
+    networks:
+      - scorume_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: scorume_frontend
+    restart: unless-stopped
+    environment:
+      VITE_API_BASE_URL: http://localhost:8000
+      VITE_API_PROXY_TARGET: http://backend:8000
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - ./frontend/index.html:/app/index.html
+      - ./frontend/tailwind.config.js:/app/tailwind.config.js
+      - ./frontend/vite.config.js:/app/vite.config.js
+    networks:
+      - scorume_network
+    depends_on:
+      - backend
+
+networks:
+  scorume_network:
+    name: scorume_network
+
+volumes:
+  scorume_postgres_data:
+    name: scorume_postgres_data
